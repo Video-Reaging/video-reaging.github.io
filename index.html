@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">  
+  
+  <meta name="description" content="Toward Temporally Consistent Face Re-Aging">
+  <meta name="keywords" content="Re-Aging, Age Transformation, temporal-consistent re-aging">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Face Re-Aging: Toward Temporally Consistent Face Re-Aging</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/github.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Video Face Re-Aging: Toward Temporally Consistent Face Re-Aging</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                Abdul Muqeet</a><sup>*</sup>,
+              </span>
+        <span class="author-block">
+                <a href="https://kyugorithm.github.io">Kyuchul Lee</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=JlNb4R8AAAAJ">Bumsoo Kim</a>,</span>                
+              </span>
+              <span class="author-block">
+                Yohan Hong</a>,
+              </span>
+       <span class="author-block">
+                Hyungrae Lee</a>,
+              </span>
+       <span class="author-block">
+                Woongon Kim</a>,
+              </span>
+              <br>
+              <span class="author-block">
+                KwangHee Lee</a>
+              </span>
+            </div>
+  
+            <div class="is-size-5 publication-authors">              
+              <span class="author-block"><img src="./static/source/vive.png"/></span>    
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+          
+            </div>
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2311.11642"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+  
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://video-reaging.github.io"                    
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (coming soon!)</span>
+                    </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="hero teaser"> 
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+	    
+      <div class="columns is-centered">
+        <!-- Input -->
+        <div class="column">
+          <div class="content">            
+            <video id="Input" controls muted loop height="200%">
+              <source src="./static/source/main.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+
+    
+      
+    <video controls loop width="1024">
+      <source src="./static/source/young2.mp4" type="video/mp4" />
+    </video>
+    
+
+  
+  <video controls loop width="1024">
+    <source src="./static/source/young1.mp4" type="video/mp4" />
+  </video>
+  
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Video face re-aging deals with altering the apparent age of a person to the target age in videos. This problem is challenging due to the lack of paired video datasets maintaining temporal consistency in identity and age. Most re-aging methods process each image individually without considering the temporal consistency of videos. While some existing works address the issue of temporal coherence through video facial attribute manipulation in latent space, they often fail to deliver satisfactory performance in age transformation. To tackle the issues, we propose (1) a novel synthetic video dataset that features subjects across a diverse range of age groups; (2) a baseline architecture designed to validate the effectiveness of our proposed dataset, and (3) the development of three novel metrics tailored explicitly for evaluating the temporal consistency of video re-aging techniques. Our comprehensive experiments on public datasets, such as VFHQ and CelebV-HQ, show that our method outperforms the existing approaches in terms of both age transformation and temporal consistency.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div>
+          <img src="./static/source/main.png" class="center">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Firstly, high-resolution synthetic facial images are created using StyleGAN. Subsequently, images of individuals at different target ages are generated using existing re-aging methods for age transformation. Next, key frames are produced by employing reentactment methods, which alters the pose and expression of these synthetic images. Finally, motion is added to these key frames using frame interolation methods, creating smooth and high-fidelity motion videos of subjects at different ages.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+  
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Results. -->
+    <h2 class="title is-3">More results</h2>
+        
+      <!-- Internet Video -->      
+      <p>
+        Our method can be applied to various Internet videos, showing its efficacy in diverse and challenging conditions.
+      </p>
+      <p> </p>
+
+      <div class="is-centered" style="width: 100%; margin-left: 0%;">
+        <div class="column">
+          <div class="content">            
+            <video id="Input" controls muted loop playsinline webkit-playsinline height="100%">
+              <source src="./static/source/0.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+        
+
+        
+
+        <div class="is-centered" style="width: 100%; margin-left: 0%;">
+          <div class="columns">
+            
+            <div class="column has-text-centered">
+                <video id="video_ablation1" controls muted loop playsinline width="100%">
+                  <source id="source_ablation1" src="./static/source/1.mp4" type="video/mp4">
+                </video>                
+            </div>    
+            
+            <div class="column has-text-centered">
+                <video id="video_ablation2" controls muted loop playsinline width="100%">
+                  <source id="source_ablation2" src="./static/source/3.mp4" type="video/mp4">
+                </video>
+                
+            </div>
+            
+          </div>
+                  
+            
+        <div class="column">
+          <div class="content">            
+            <video id="Input" controls muted loop playsinline webkit-playsinline height="100%">
+              <source src="./static/source/4.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+  <section class="section">
+      <div class="container is-max-desktop">
+    
+        <!-- Results. -->
+        <h2 class="title is-3">Comparison</h2>
+        <p>                   
+          We compare our results with state-of-the-art methods. Existing methods suffer from flickering
+        </p>
+        <div class="column">
+          <div class="content">            
+            <video id="Input" controls muted loop playsinline webkit-playsinline height="100%">
+              <source src="./static/source/comparison.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+  </section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{muqeet2023video,
+      title={Video Face Re-Aging: Toward Temporally Consistent Face Re-Aging},
+      author={Muqeet, Abdul and Lee, Kyuchul and Kim, Bumsoo and Hong, Yohan and Lee, Hyungrae and Kim, Woonggon and Lee, Kwang Hee},
+      journal={arXiv preprint arXiv:2311.11642},
+      year={2023},
+  }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered">
+      <div class="column is-16">
+        <h2 class="title">Acknowledgements</h2>
+
+        <div class="content">
+          <p>
+            The website code is borrowed from the <a
+            href="https://github.com/nerfies/nerfies.github.io">source code</a> of Nerfies. We thank the authors for sharing the templates.
+          </p>
+
+          <div class="content has-text-justified">
+            <p>
+              The original videos used in the project are given below: 
+            </p>
+          </div>
+
+          <div class="content has-text-justified">
+            <p>
+              https://www.youtube.com/watch?v=ilIefxbSJT8
+            </p>
+            <p>
+              https://www.youtube.com/watch?v=6v1LWn9saJk              
+            </p>
+            <p>              
+              https://www.youtube.com/watch?v=VCYuI_8cPEc
+            </p>
+            <p>
+              https://www.youtube.com/watch?v=c_CsqAn7KqQ
+            </p>
+            <p>
+              https://www.youtube.com/watch?v=324pojjHOhI
+            </p>
+            <p>
+              https://www.youtube.com/watch?v=xpyrefzvTpI
+            </p>
+            <p>
+              https://www.youtube.com/watch?v=VN4xXgcogCo
+            </p>
+            <p>
+              https://www.youtube.com/watch?v=x_xGz6KKh2M
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
