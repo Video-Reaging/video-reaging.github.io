@@ -1,4 +1,4 @@
-# Video Re-sging
+# Video Face Re-Aging
 
 This is the repository that contains source code for the [VideoReAging website](https://video-reaging.github.io/). We thank the authors of [Nerfies](https://nerfies.github.io) for sharing the webpage templates.
 
